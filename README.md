@@ -2,6 +2,7 @@
 Do stocks that start with "A" do better
 
 ## PLANNING STAGE
+
 1. Collecting data
 
 1.1 Choosing a time period
