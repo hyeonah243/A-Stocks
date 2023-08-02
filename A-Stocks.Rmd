@@ -6,20 +6,40 @@ output: html_notebook
 library(quantmod)
 library(zoo)
 library(xts)
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(dplyr)
 ```
 
 ```{r data collection}
-# Using the quantmod function getSymbols()
-nyse_symbols <- stockSymbols(exchange="NYSE")
+stock_symbols = stockSymbols(
+  exchange = c("NASDAQ", "NYSE"),
+  sort.by = c("Exchange", "Symbol"),
+  quiet = FALSE) #if TRUE, status messages will be printed to the console.
 
-#head(nyse_symbols)
-# Or, using the quantmod function getOptionChain()
-# nyse_symbols <- stockSymbols(exchange = "NYSE", option = FALSE)
+stock_symbols = stock_symbols %>% filter (Exchange=="NYSE")# %>% filter(substr(Symbol,1,1)=="A")
+
+count_by_alphabet <- stock_symbols %>%
+  group_by(Alphabet = substr(Symbol, 1, 1)) %>%
+  summarize(Count = n())
+
+ggplot(data=count_by_alphabet) +
+  geom_col(aes(x=Alphabet, y= Count, fill=Count)) +
+  scale_fill_gradient(trans='reverse')
 
 ```
 
 
 ```{r}
-
+getYahooData(
+  symbol,
+  start,
+  end,
+  freq = "daily",
+  type = "price",
+  adjust = TRUE,
+  quiet = FALSE
+)
 ```
 
