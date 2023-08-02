@@ -1,0 +1,25 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r libraries}
+library(quantmod)
+library(zoo)
+library(xts)
+```
+
+```{r data collection}
+# Using the quantmod function getSymbols()
+nyse_symbols <- stockSymbols(exchange="NYSE")
+
+#head(nyse_symbols)
+# Or, using the quantmod function getOptionChain()
+# nyse_symbols <- stockSymbols(exchange = "NYSE", option = FALSE)
+
+```
+
+
+```{r}
+
+```
+
