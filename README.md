@@ -5,7 +5,7 @@ Do stocks that start with "A" do better
 
 1. Collecting data
    
-   1.1 Choosing a time period
+   1.1  Choosing a time period
    To start off, I shall choose the time period of 10 years (integer and a nice number), from 1st Jan 2010 - 31st Dec 2020
 
    1.2 Choosing an exchange
