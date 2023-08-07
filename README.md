@@ -13,4 +13,16 @@ Do stocks that start with "A" do better
    
    NYSE and Nasdaq have 2000+ and 3000+ (very rough estimates) stocks listed respectively (as of March 2023) but NYSE has a higher market cap.
    There are two main concerns when collecting data, which would be new companies listed after the start date of data collection and companies that delisted before the end date of data collection (i will think about these later).
-   Another concern is about few of large companies that might contribute the most to the returns of the total stocks (which i will also think about later).
+   
+
+   1.3 Choosing data to include 
+
+   Another concern is about few of large companies that might contribute the most to the returns of the total stocks.
+   One way to mitigate this would be to exclude companies with market cap more than a certain value. 
+
+
+3. Benchmark
+   
+   2.1 Returns
+
+      2.1.1 
